@@ -265,6 +265,7 @@ class CompassFilter implements FilterInterface
 
         // it's not really usefull but... https://github.com/chriseppstein/compass/issues/376
         $pb->setEnv('HOME', sys_get_temp_dir());
+        $pb->setEnv('PATH', getenv('PATH'));
 
         $proc = $pb->getProcess();
         $code = $proc->run();
